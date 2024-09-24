@@ -12,6 +12,7 @@ var (
 	DutyCalendar   = api.ApiGroupApp.DutyCalendarController
 	Rule           = api.ApiGroupApp.RuleController
 	Auth           = api.ApiGroupApp.UserController
+	Ldap           = api.ApiGroupApp.LdapController
 	AlertEvent     = api.ApiGroupApp.AlertEventController
 	Role           = api.ApiGroupApp.UserRoleController
 	Permissions    = api.ApiGroupApp.UserPermissionsController

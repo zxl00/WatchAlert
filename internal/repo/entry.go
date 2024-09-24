@@ -32,6 +32,7 @@ type (
 		UserPermissions() InterUserPermissionsRepo
 		Setting() InterSettingRepo
 		MonitorSSL() InterMonitorSSLRepo
+		Ldap() InterLdapRepo
 	}
 )
 
@@ -68,3 +69,5 @@ func (e *entryRepo) UserPermissions() InterUserPermissionsRepo {
 }
 func (e *entryRepo) Setting() InterSettingRepo       { return newSettingRepoInterface(e.db, e.g) }
 func (e *entryRepo) MonitorSSL() InterMonitorSSLRepo { return newMonitorSSLInterface(e.db, e.g) }
+
+func (e *entryRepo) Ldap() InterLdapRepo { return newLdapInterface(e.db, e.g) }

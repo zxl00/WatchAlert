@@ -13,6 +13,7 @@ func Router(engine *gin.Engine) {
 			DashboardInfo.API(v1)
 			system.POST("register", Auth.Register)
 			system.POST("login", Auth.Login)
+			system.POST("ldap/login", Ldap.Login)
 			system.GET("checkUser", Auth.CheckUser)
 			system.GET("checkNoticeStatus", Notice.Check)
 			system.GET("userInfo", Auth.Get)
@@ -21,6 +22,7 @@ func Router(engine *gin.Engine) {
 		w8t := v1.Group("w8t")
 		{
 			Auth.API(w8t)
+			Ldap.API(w8t)
 			Permissions.API(w8t)
 			AlertEvent.API(w8t)
 			Role.API(w8t)

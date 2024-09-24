@@ -21,6 +21,7 @@ var (
 	SilenceService          InterSilenceService
 	TenantService           InterTenantService
 	UserService             InterUserService
+	LdapService             InterLdapService
 	UserRoleService         InterUserRoleService
 	AlertService            InterAlertService
 	RuleTmplGroupService    InterRuleTmplGroupService
@@ -49,6 +50,7 @@ func NewServices(ctx *ctx.Context) {
 	SilenceService = newInterSilenceService(ctx)
 	TenantService = newInterTenantService(ctx)
 	UserService = newInterUserService(ctx)
+	LdapService = newInterLdapService(ctx)
 	UserRoleService = newInterUserRoleService(ctx)
 	AlertService = newInterAlertService(ctx)
 	UserPermissionService = newInterUserPermissionService(ctx)

@@ -14,6 +14,7 @@ type ApiGroup struct {
 	SilenceController
 	RuleController
 	UserController
+	LdapController
 	AlertEventController
 	UserRoleController
 	UserPermissionsController
